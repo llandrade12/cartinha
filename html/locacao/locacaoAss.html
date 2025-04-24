@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/styleAss.css">
+  <link rel="stylesheet" href="/css/locaAss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="../../img/logo_verde-removebg-preview (1).png" alt="logo Multi Ser">
+
+      <button class="menu-hamburguer" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="menu-container">
+        <ul class="links">
+          <a href="/html/index/indexAss.html">
+            <li>Home</li>
+          </a>
+          <a href="/html/sobreNos/sobreNosAss.html">
+            <li>Sobre nós</li>
+          </a>
+          <a href="/html/clinicaSocial/clinicaSocialAss.html">
+            <li>Clinica social</li>
+          </a>
+          <a href="locacaoAss.html">
+            <li>Locação</li>
+          </a>
+        </ul>
+        <ul class="icons">
+          <a href="https://web.facebook.com/multiser.clinica/ " target="_blank">
+            <li><i class="fab fa-facebook"></i></li>
+          </a>
+          <a href="https://www.instagram.com/multiser.clinica/" target="_blank">
+            <li><i class="fab fa-instagram"></i></li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Botão de Acessibilidade -->
+  <a href="/html/locacao/locacao.html">
+    <button class="botao-acessibilidade" title="Acessibilidade" aria-label="Botão de acessibilidade">
+      <i class="fas fa-universal-access"></i>
+    </button>
+  </a>
+
+  <main class="container-locacao">
+    <section class="carrosel-locacao">
+      <div class="slide-locacao ativo">
+        <img src="/img/locacao-1.jpg" alt="Imagem da locação 1">
+      </div>
+      <div class="slide-locacao">
+        <img src="/img/locacao-2.jpg" alt="Imagem da locação 2">
+      </div>
+      <div class="slide-locacao">
+        <img src="/img/locacao-3.jpg" alt="Imagem da locação 3">
+      </div>
+      <div class="slide-locacao">
+        <img src="/img/locacao-4.jpg" alt="Imagem da locação 4">
+      </div>
+      <div class="slide-locacao">
+        <img src="/img/locacao-5.jpg" alt="Imagem da locação 5">
+      </div>
+      <div class="navegacao-carrosel">
+        <button class="nav-btn-carrosel prev-btn" aria-label="Imagem anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-btn-carrosel next-btn" aria-label="Próxima imagem">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <section class="conteudo-locacao">
+      <h1>Alugue uma das nossas salas e faça parte da equipe Multi Ser</h1>
+      <p>A Multiser é uma clínica de psicologia pensada para acolher tanto os pacientes quanto os profissionais.
+        Oferecemos um ambiente tranquilo, confortável e com toda a estrutura necessária para atendimentos individuais,
+        em grupo ou supervisões. Alugue uma das nossas salas na Multiser e faça parte da nossa equipe. Pois, aqui você
+        pode encontrar mais do que um espaço: encontra uma rede de apoio, troca de experiências e valorização do seu
+        trabalho.</p>
+      <a href="https://api.whatsapp.com/message/SJ2YGAQGFDK7G1?autoload=1&app_absent=0&utm_source=heylink.me"
+        target="_blank">
+        <button class="botao-agendamento">Agendar uma visita</button>
+      </a>
+    </section>
+  </main>
+
+  <div class="banner-locacao">
+    <div class="conteudo-banner">
+      <h2>Diferenciais da Sublocação</h2>
+      <p>A sublocação em nosso espaço qualificado oferece um ambiente profissional estruturado. Um dos principais
+        diferenciais é a possibilidade de acesso a uma infraestrutura completa, sem a necessidade de altos investimentos
+        iniciais.
+
+        Espaços já mobiliados, com internet de alta velocidade, recepção, salas de reunião e áreas comuns oferecem
+        praticidade e economia para profissionais autônomos, pequenas empresas e startups.</p>
+    </div>
+    <picture>
+      <source media="(max-width: 768px)" srcset="/img/locacao-7-mobile.png">
+      <img src="/img/locacao-7.png" alt="Banner da locação">
+    </picture>
+  </div>
+
+  <div class="precos">
+    <picture class="tabela-desktop">
+      <source media="(min-width: 769px)" srcset="/img/tabela-preco.png">
+      <img src="/img/tabela-preco.png" alt="Tabela de preços completa">
+    </picture>
+
+    <div class="tabelas-mobile">
+      <picture>
+        <source media="(max-width: 768px)" srcset="/img/tabela-1.png">
+        <img src="/img/tabela-1.png" alt="Tabela de preços fixos">
+      </picture>
+      
+      <picture>
+        <source media="(max-width: 768px)" srcset="/img/tabela-2.png">
+        <img src="/img/tabela-2.png" alt="Tabela de preços avulsos">
+      </picture>
+    </div>
+  </div>
+
+  <!-- Agendamento -->
+  <section class="formulario-locacao">
+
+    <form id="form-location">
+      <div>
+        <h2>Entre em Contato</h2>
+      </div>
+
+      <label for="nome">Nome Completo</label>
+      <input type="text" id="nome-form" name="nome" placeholder="Nome Completo" required> <br>
+
+      <label for="email">Email</label>
+      <input type="email" id="email-form" name="email" placeholder="exemplo@exemplo.com" required> <br>
+
+      <label for="cell">Celular Pessoal</label>
+      <input type="text" id="cell-form" name="cell" placeholder="(00) 00000-0000" required> <br>
+
+      <label for="data">Data</label>
+      <input type="date" id="data-form" name="data" placeholder="Date" min="2025-04-24T09:00" max="2025-04-30T16:00"
+        required> <br>
+
+      <label for="observacao">Observações</label>
+      <input type="text" id="obs-form" name="observacao" placeholder="Digite sua mensagem." required> <br>
+
+      <button type="submit" class="botao-agendamento" id="button-form">Agendar Visita</button>
+    </form>
+
+  </section>
+
+  <section class="localizacao">
+    <div class="container-localizacao">
+      <h1>Horário de Funcionamento</h1>
+      <p>08h00 às 21h00 <br> Necessário agendar horário através do formulário.</p>
+
+      <h1>Localização</h1>
+      <p>Localizado em "Salvador Trade Center", Torre norte - Av. Trancedo Neves, 1632 - sala 510 - Caminho das Árvores,
+        Salvador - BA, 40301-155.</p>
+      <a href="https://api.whatsapp.com/message/SJ2YGAQGFDK7G1?autoload=1&app_absent=0&utm_source=heylink.me"
+        target="_blank">
+        <button class="botao-agendamento">Agendar uma visita</button>
+      </a>
+    </div>
+    <div class="container-mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.815638857556!2d-38.45631258842862!3d-12.983640660000525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b10049d63ef%3A0x5db7abe00761d876!2sSalvador%20Trade%20Center!5e0!3m2!1spt-BR!2sbr!4v1744828870476!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="/img/logo_verde-removebg-preview (1).png" alt="logo Multi Ser">
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3>Redes sociais</h3>
+          <ul>
+            <li><a href="https://api.whatsapp.com/message/SJ2YGAQGFDK7G1?autoload=1&app_absent=0&utm_source=heylink.me"
+                target="_blank">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/multiser.clinica/" target="_blank">Instagram</a></li>
+            <li><a href="https://web.facebook.com/multiser.clinica/" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Fale conosco</h3>
+          <ul>
+            <li><a href="https://api.whatsapp.com/message/SJ2YGAQGFDK7G1?autoload=1&app_absent=0&utm_source=heylink.me"
+                target="_blank">Agendar consulta</a></li>
+            <li><a href="/html/clinicaSocial/clinicaSocialAss.html">Clínica social</a></li>
+            <li><a href="/html/locacao/locacaoAss.html">Alugue uma sala</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Todos os direitos reservados a nós</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/locacao.js"></script>
+</body>
+
+</html>

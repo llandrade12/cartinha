@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap');
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    min-height: calc(100vh - 82px); /* Altura total da viewport menos a altura do header */
+    position: relative;
+}
+
+.banner img {
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.principal {
+    width: 55%;
+    color: white;
+    padding: 2rem;
+    margin-right: 2rem;
+}
+
+p, .avaliacoes .slide-avaliacoes .card-avaliacao p, .localizacao .container-localizacao p {
+    font-family: 'Baloo 2';
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+}
+
+/* Seção Psicologia */
+.psicologia {
+    padding: 10rem 2rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.psicologia h1 {
+    color: #6EAE9C;
+    font-family: 'Baloo 2';
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.conteudo-dinamico {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.psicologia-conteudo {
+    display: none;
+    width: 100%;
+    align-items: center;
+    gap: 4rem;
+}
+
+.psicologia-conteudo.ativo {
+    display: flex;
+}
+
+.psicologia-conteudo img {
+    width: 40%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.psicologia-conteudo p {
+    flex: 1;
+    color: white;
+    font-family: 'Baloo 2';
+    font-size: 1.7rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+}
+
+.botoes-navegacao {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.botao-circular {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: #6EAE9C;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.botao-circular:hover {
+    transform: scale(1.2);
+}
+
+.botao-circular.ativo {
+    background-color: #fffd83;
+    transform: scale(1.5);
+}
+
+/* Seção Nutrição */
+.nutricao {
+    padding: 2rem 2rem 2rem;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nutricao h1 {
+    color: #6EAE9C;
+    font-family: 'Baloo 2';
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.nutricao-conteudo {
+    display: none;
+    width: 100%;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nutricao-conteudo.ativo {
+    display: flex;
+}
+
+.nutricao-conteudo img {
+    width: 40%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.nutricao-conteudo p {
+    flex: 1;
+    color: white;
+    font-family: 'Baloo 2';
+    font-size: 1.7rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+}
+
+/* Seção Avaliações */
+.avaliacoes {
+    padding: 2rem 2rem 2rem;
+    min-height: 60vh;
+}
+
+.avaliacoes h1 {
+    color: #6EAE9C;
+    font-family: 'Baloo 2';
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.container-avaliacoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.wrapper-avaliacoes {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide-avaliacoes {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s ease;
+}
+
+.card-avaliacao {
+    min-width: calc((100% - 4rem) / 3);
+    background-color: #2A2A2A;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-cliente {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.perfil-cliente img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.perfil-cliente h3 {
+    color: white;
+    font-family: 'Baloo 2';
+    font-size: 1.2rem;
+}
+
+.card-avaliacao p {
+    color: white;
+    font-family: 'Baloo 2';
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.nav-btn {
+    background-color: #6EAE9C;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #3b6d60;
+    color: #fffd83;
+    transform: scale(1.1);
+}
+
+.nav-btn.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Seção Localização */
+.localizacao {
+    padding: 7rem;
+    min-height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.container-localizacao {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.container-localizacao h1 {
+    color: #6EAE9C;
+    margin-bottom: 1rem;
+}
+
+.container-localizacao p {
+    color: white;
+    font-family: 'Baloo 2';
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.container-mapa {
+    flex: 1;
+    height: 450px;
+}
+
+.container-mapa iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries para Mobile */
+@media (max-width: 768px) {
+    /* Banner */
+    .banner {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .principal {
+        width: 100%;
+        padding: 2rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p, .avaliacoes .slide-avaliacoes .card-avaliacao p, .localizacao .container-localizacao p {
+        font-size: 1.2rem;
+    }
+
+    /* Seções Psicologia e Nutrição */
+    .psicologia, .nutricao {
+        padding: 4rem 1rem;
+    }
+
+    .psicologia-conteudo, .nutricao-conteudo {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .psicologia-conteudo img, .nutricao-conteudo img {
+        width: 100%;
+    }
+
+    .psicologia-conteudo p, .nutricao-conteudo p {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Seção Avaliações */
+    .container-avaliacoes {
+        padding: 0 1rem;
+    }
+
+    .nav-btn {
+        display: none; /* Esconde as setas em mobile */
+    }
+
+    .card-avaliacao {
+        min-width: 100%;
+        margin-right: 1rem;
+    }
+
+    /* Seção Localização */
+    .localizacao {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .container-localizacao {
+        padding: 0;
+        text-align: center;
+    }
+
+    .container-mapa {
+        width: 100%;
+        height: 300px;
+    }
+
+    .psicologia h1, .nutricao h1, .avaliacoes h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .principal button {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .botao-circular {
+        width: 15px;
+        height: 15px;
+    }
+
+    .card-avaliacao {
+        padding: 1rem;
+    }
+
+    .psicologia h1, .nutricao h1, .avaliacoes h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+}

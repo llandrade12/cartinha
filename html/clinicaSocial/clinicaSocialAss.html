@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/styleAss.css">
+  <link rel="stylesheet" href="/css/clinAss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="../../img/logo_verde-removebg-preview (1).png" alt="logo Multi Ser">
+
+      <button class="menu-hamburguer" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="menu-container">
+        <ul class="links">
+          <a href="/html/index/indexAss.html">
+            <li>Home</li>
+          </a>
+          <a href="/html/sobreNos/sobreNosAss.html">
+            <li>Sobre nós</li>
+          </a>
+          <a href="/html/clinicaSocial/clinicaSocialAss.html">
+            <li>Clinica social</li>
+          </a>
+          <a href="/html/locacao/locacaoAss.html">
+            <li>Locação</li>
+          </a>
+        </ul>
+        <ul class="icons">
+          <a href="https://web.facebook.com/multiser.clinica/ " target="_blank">
+            <li><i class="fab fa-facebook"></i></li>
+          </a>
+          <a href="https://www.instagram.com/multiser.clinica/" target="_blank">
+            <li><i class="fab fa-instagram"></i></li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Botão de Acessibilidade -->
+  <a href="/html/clinicaSocial/clinicaSocial.html">
+    <button class="botao-acessibilidade" title="Acessibilidade" aria-label="Botão de acessibilidade">
+      <i class="fas fa-universal-access"></i>
+    </button>
+  </a>
+
+  <section class="container-clinica">
+    <div class="clinica-social">
+      <h1>Faça seu cadastro para o nosso programa de atendimento social</h1>
+      
+      <div class="conteudo-clinica">
+        <div>
+          <h2>Como funciona:</h2>
+          <p>O programa de atendimento social oferece consultas psicológicas com valores acessíveis para pessoas em situação de vulnerabilidade social. As consultas são realizadas por profissionais qualificados e comprometidos com o bem-estar da comunidade.</p>
+        </div>
+        
+        <div>
+          <h2>Lista de espera:</h2>
+          <p>Após o cadastro, você entrará em nossa lista de espera. Assim que houver disponibilidade, entraremos em contato para agendar sua primeira consulta com um de nossos profissionais.</p>
+        </div>
+        
+        <div class="parte-2">
+          <h2>A quem se destina:</h2>
+          <p>O programa é destinado a pessoas que se encontram em situação de vulnerabilidade social e econômica, com renda familiar de até 3 salários mínimos. Para participar, é necessário apresentar documentos que comprovem a situação socioeconômica durante a avaliação inicial.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="clinica-particular">
+      <h2>Não se enquadra nos requisitos?</h2>
+      <p>Faça um agendamento particular hoje mesmo!</p>
+      <a href="https://api.whatsapp.com/message/SJ2YGAQGFDK7G1?autoload=1&app_absent=0&utm_source=heylink.me" target="_blank">
+        Faça seu agendamento agora</a>
+    </div>
+  </section>
+
+  <section class="formulario-social">
+    <div class="container-formulario">
+      <h2>Formulário de Inscrição para Clínica Social</h2>
+      
+      <form id="form-social" onsubmit="return validarFormulario(event)">
+        <div class="campo-form">
+          <label for="email">E-mail*</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <div class="campo-form">
+          <label for="nome">Nome Completo*</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+        </div>
+
+        <div class="campo-form">
+          <label for="idade">Idade*</label>
+          <input type="number" id="idade" name="idade" min="0" max="120" placeholder="Digite sua idade" required>
+        </div>
+
+        <div class="campo-form" id="campo-responsavel" style="display: none;">
+          <label for="responsavel">Nome do Responsável*</label>
+          <input type="text" id="responsavel" name="responsavel" placeholder="Digite o nome do responsável">
+        </div>
+
+        <div class="campo-form">
+          <label for="cidade">Cidade/Estado*</label>
+          <input type="text" id="cidade" name="cidade" placeholder="Ex: Salvador/BA" required>
+        </div>
+
+        <div class="campo-form">
+          <label for="ocupacao">Ocupação*</label>
+          <input type="text" id="ocupacao" name="ocupacao" placeholder="Digite sua ocupação atual" required>
+        </div>
+
+        <div class="campo-form">
+          <label for="celular">Celular*</label>
+          <input type="tel" id="celular" name="celular" placeholder="(00) 00000-0000" required>
+        </div>
+
+        <div class="campo-form">
+          <label>Histórico prévio de terapia ou acompanhamento psicológico*</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="historico-sim" name="historico" value="sim" required>
+              <label for="historico-sim">Sim</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="historico-nao" name="historico" value="nao" required>
+              <label for="historico-nao">Não</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="campo-form">
+          <label>Uso atual de medicação psiquiátrica*</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="medicacao-sim" name="medicacao" value="sim" required>
+              <label for="medicacao-sim">Sim</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="medicacao-nao" name="medicacao" value="nao" required>
+              <label for="medicacao-nao">Não</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="campo-form">
+          <label for="renda">Renda Mensal*</label>
+          <select id="renda" name="renda" required>
+            <option value="">Selecione sua renda mensal</option>
+            <option value="menos-1">Menos de 1 salário mínimo</option>
+            <option value="1-salario">1 salário mínimo</option>
+            <option value="2-salarios">2 salários mínimos</option>
+            <option value="mais-2">Mais de 2 salários mínimos</option>
+          </select>
+        </div>
+
+        <div class="campo-form">
+          <label for="periodo">Melhor período para agendamento*</label>
+          <select id="periodo" name="periodo" required>
+            <option value="">Selecione o melhor período</option>
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+          </select>
+        </div>
+
+        <div class="campo-form">
+          <label for="tipo-atendimento">Tipo de Atendimento*</label>
+          <select id="tipo-atendimento" name="tipo-atendimento" required>
+            <option value="">Selecione o tipo de atendimento</option>
+            <option value="presencial">Presencial</option>
+            <option value="online">Online</option>
+          </select>
+        </div>
+
+        <div class="campo-form">
+          <label for="razao">Razão pela qual deseja realizar terapia*</label>
+          <textarea id="razao" name="razao" rows="4" placeholder="Descreva brevemente o motivo pelo qual você busca terapia" required></textarea>
+        </div>
+
+        <button type="submit" class="botao-enviar">Enviar Inscrição</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="/img/logo_verde-removebg-preview (1).png" alt="logo Multi Ser">
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3>Redes sociais</h3>
+          <ul>
+            <li><a href="https://api.whatsapp.com/message/SJ2YGAQGFDK7G1?autoload=1&app_absent=0&utm_source=heylink.me"
+                target="_blank">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/multiser.clinica/" target="_blank">Instagram</a></li>
+            <li><a href="https://web.facebook.com/multiser.clinica/" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Fale conosco</h3>
+          <ul>
+            <li><a href="https://api.whatsapp.com/message/SJ2YGAQGFDK7G1?autoload=1&app_absent=0&utm_source=heylink.me"
+                target="_blank">Agendar consulta</a></li>
+            <li><a href="/html/clinicaSocial/clinicaSocialAss.html">Clínica social</a></li>
+            <li><a href="/html/locacao/locacaoAss.html">Alugue uma sala</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Todos os direitos reservados a nós</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/clinicaSocial.js"></script>
+</body>
+
+</html>

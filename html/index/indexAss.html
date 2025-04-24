@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/styleAss.css">
+  <link rel="stylesheet" href="/css/indexAss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="../../img/logo_verde-removebg-preview (1).png" alt="logo Multi Ser">
+      
+      <button class="menu-hamburguer" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="menu-container">
+        <ul class="links">
+          <a href="indexAss.html">
+            <li>Home</li>
+          </a>
+          <a href="../sobreNos/sobreNosAss.html">
+            <li>Sobre nós</li>
+          </a>
+          <a href="../clinicaSocial/clinicaSocialAss.html">
+            <li>Clinica social</li>
+          </a>
+          <a href="../locacao/locacaoAss.html">
+            <li>Locação</li>
+          </a>
+        </ul>
+        <ul class="icons">
+          <a href="https://web.facebook.com/multiser.clinica/ " target="_blank">
+            <li><i class="fab fa-facebook"></i></li>
+          </a>
+          <a href="https://www.instagram.com/multiser.clinica/" target="_blank">
+            <li><i class="fab fa-instagram"></i></li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Botão de Acessibilidade -->
+  <a href="../../index.html">
+    <button class="botao-acessibilidade" title="Acessibilidade" aria-label="Botão de acessibilidade">
+      <i class="fas fa-universal-access"></i>
+    </button>
+  </a>
+
+  <section class="banner">
+    <img src="/img/banner-dark.png" alt="Banner multiSer">
+    <section class="principal">
+      <h1>O lugar do seu bem estar</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quis cupiditate laborum optio? Quos commodi
+        nostrum totam sit id recusandae iste nihil eligendi ducimus sed autem dolores nulla, pariatur ipsum!</p>
+      <a href="https://api.whatsapp.com/message/SJ2YGAQGFDK7G1?autoload=1&app_absent=0&utm_source=heylink.me" target="_blank">
+        <button class="botao-agendamento">Faça seu agendamento agora</button>
+      </a>
+
+    </section>
+  </section>
+
+  <section class="psicologia">
+    <h1>Especialidades psicológicas</h1>
+    <div class="conteudo-dinamico">
+      <div class="psicologia-conteudo ativo" id="psicologia-1">
+        <img src="/img/psi-1.jpg" alt="Terapia familiar">
+        <p>PSICOLOGIA 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quis cupiditate laborum
+          optio? Quos commodi nostrum totam sit id recusandae iste nihil eligendi ducimus sed autem dolores nulla,
+          pariatur ipsum!</p>
+      </div>
+      <div class="psicologia-conteudo" id="psicologia-2">
+        <img src="/img/psi-2.jpg" alt="Terapia de casal">
+        <p>PSICOLOGIA 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quis cupiditate laborum
+          optio? Quos commodi nostrum totam sit id recusandae iste nihil eligendi ducimus sed autem dolores nulla,
+          pariatur ipsum!</p>
+      </div>
+      <div class="psicologia-conteudo" id="psicologia-3">
+        <img src="/img/psi-3.jfif" alt="Psicologia infantil">
+        <p>PSICOLOGIA 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quis cupiditate laborum
+          optio? Quos commodi nostrum totam sit id recusandae iste nihil eligendi ducimus sed autem dolores nulla,
+          pariatur ipsum!</p>
+      </div>
+    </div>
+    <div class="botoes-navegacao">
+      <button class="botao-circular ativo" data-slide="psicologia-1"></button>
+      <button class="botao-circular" data-slide="psicologia-2"></button>
+      <button class="botao-circular" data-slide="psicologia-3"></button>
+    </div>
+  </section>
+
+  <section class="nutricao">
+    <h1>Especialidades nutricionais</h1>
+    <div class="conteudo-dinamico">
+      <div class="nutricao-conteudo ativo" id="nutricao-1">
+        <img src="/img/nutri-1.jfif" alt="Nutrição 1">
+        <p>Nutrição 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quis cupiditate laborum optio?
+          Quos commodi nostrum totam sit id recusandae iste nihil eligendi ducimus sed autem dolores nulla, pariatur
+          ipsum!</p>
+      </div>
+      <div class="nutricao-conteudo" id="nutricao-2">
+        <img src="/img/nutri-2.jfif" alt="Nutrição 2">
+        <p>Nutrição 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quis cupiditate laborum optio?
+          Quos commodi nostrum totam sit id recusandae iste nihil eligendi ducimus sed autem dolores nulla, pariatur
+          ipsum!</p>
+      </div>
+    </div>
+    <div class="botoes-navegacao">
+      <button class="botao-circular ativo" data-slide="nutricao-1"></button>
+      <button class="botao-circular" data-slide="nutricao-2"></button>
+    </div>
+  </section>
+
+  <section class="avaliacoes">
+    <h1>Veja o que nossos clientes falam:</h1>
+    <div class="container-avaliacoes">
+      <button class="nav-btn prev-btn" aria-label="Ver avaliações anteriores">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="wrapper-avaliacoes">
+        <div class="slide-avaliacoes">
+          <div class="card-avaliacao">
+            <div class="perfil-cliente">
+              <img src="/img/user-3.avif" alt="Foto do cliente">
+              <h3>Monique Amorin</h3>
+            </div>
+            <p>Achei muito legal, top demais estou até me recuperando psicologicamente desse tanto de trabalho</p>
+          </div>
+
+          <div class="card-avaliacao">
+            <div class="perfil-cliente">
+              <img src="/img/user-1.jpg" alt="Foto do cliente">
+              <h3>João Silva</h3>
+            </div>
+            <p>Excelente atendimento! A equipe é muito profissional e atenciosa. Recomendo!</p>
+          </div>
+
+          <div class="card-avaliacao">
+            <div class="perfil-cliente">
+              <img src="/img/user-4.jpg" alt="Foto do cliente">
+              <h3>Maria Santos</h3>
+            </div>
+            <p>Ótimo ambiente e profissionais capacitados. Me ajudaram muito no meu processo.</p>
+          </div>
+
+          <div class="card-avaliacao">
+            <div class="perfil-cliente">
+              <img src="/img/user-2.jpg" alt="Foto do cliente">
+              <h3>Pedro Oliveira</h3>
+            </div>
+            <p>Superou minhas expectativas! Ambiente acolhedor e tratamento personalizado.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="nav-btn next-btn" aria-label="Ver próximas avaliações">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+  <section class="localizacao">
+    <div class="container-localizacao">
+      <h1>Horário de Funcionamento</h1>
+      <p>08h00 às 21h00 <br> Necessário agendar horário através do formulário.</p>
+
+      <h1>Localização</h1>
+      <p>Localizado em "Salvador Trade Center", Torre norte - Av. Trancedo Neves, 1632 - sala 510 - Caminho das Árvores,
+        Salvador - BA, 40301-155.</p>
+    </div>
+    <div class="container-mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.815638857556!2d-38.45631258842862!3d-12.983640660000525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b10049d63ef%3A0x5db7abe00761d876!2sSalvador%20Trade%20Center!5e0!3m2!1spt-BR!2sbr!4v1744828870476!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+ 
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="/img/logo_verde-removebg-preview (1).png" alt="logo Multi Ser">
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3>Redes sociais</h3>
+          <ul>
+            <li><a href="https://api.whatsapp.com/message/SJ2YGAQGFDK7G1?autoload=1&app_absent=0&utm_source=heylink.me" target="_blank">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/multiser.clinica/" target="_blank">Instagram</a></li>
+            <li><a href="https://web.facebook.com/multiser.clinica/" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Fale conosco</h3>
+          <ul>
+            <li><a href="https://api.whatsapp.com/message/SJ2YGAQGFDK7G1?autoload=1&app_absent=0&utm_source=heylink.me" target="_blank">Agendar consulta</a></li>
+            <li><a href="/html/clinicaSocial/clinicaSocialAss.html">Clínica social</a></li>
+            <li><a href="/html/locacao/locacaoAss.html">Alugue uma sala</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Todos os direitos reservados a nós</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../js/psicologia.js"></script>
+  <script src="../../js/nutricao.js"></script>
+  <script src="../../js/avaliacoes.js"></script>
+  <script src="../../js/nav.js"></script>
+</body>
+
+</html>

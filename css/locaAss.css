@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap');
+
+.container-locacao {
+    max-width: 1400px;
+    min-height: calc(100vh - 200px);
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.carrosel-locacao {
+    width: 100%;
+    position: relative;
+    padding-bottom: 133%; /* Proporção 3:4 */
+}
+
+.slide-locacao {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.slide-locacao.ativo {
+    display: block;
+    opacity: 1;
+    z-index: 3;
+}
+
+.slide-locacao.anterior {
+    display: block;
+    opacity: 0.5;
+    transform: scale(0.9) translateX(-10%);
+    z-index: 2;
+}
+
+.slide-locacao.proximo {
+    display: block;
+    opacity: 0.5;
+    transform: scale(0.9) translateX(10%);
+    z-index: 1;
+}
+
+.slide-locacao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navegacao-carrosel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% + 40px);
+    left: -20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.nav-btn-carrosel {
+    background-color: #6EAE9C;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+
+.nav-btn-carrosel:hover {
+    background-color: #3b6d60;
+    color: #fffd83;
+    transform: scale(1.1);
+}
+
+.conteudo-locacao {
+    text-align: left;
+    max-width: 600px;
+}
+
+.conteudo-locacao h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #6EAE9C;
+}
+
+.conteudo-locacao p {
+    font-family: 'Baloo 2';
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.banner-locacao {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+    background-color: #15201d;
+    font-size: 0; /* Remove espaço extra */
+}
+
+.conteudo-banner {
+    padding: 4rem;
+    padding-bottom: 0;
+    font-size: 1rem; /* Restaura o tamanho da fonte para o conteúdo */
+}
+
+.conteudo-banner h2 {
+    font-family: 'Baloo 2';
+    font-size: 2.5rem;    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.conteudo-banner p {
+    font-family: 'Baloo 2';
+    font-size: 1.4rem;
+    line-height: 2;
+    color: #fff;
+}
+
+.banner-locacao picture {
+    display: block;
+    font-size: 0;
+}
+
+.banner-locacao img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+/* Seção Localização */
+.localizacao {
+    padding: 7rem;
+    min-height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    background-color: #15201d;
+}
+
+.container-localizacao {
+    flex: 1;
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.container-localizacao h1 {
+    color: #6EAE9C;
+    font-family: 'Baloo 2';
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.container-localizacao p {
+    color: white;
+    font-family: 'Baloo 2';
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.container-mapa {
+    flex: 1;
+    height: 450px;
+}
+
+.container-mapa iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.precos {
+    width: 100%;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.precos img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.tabelas-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.tabela-desktop {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.tabela-desktop img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .container-locacao {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .carrosel-locacao {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .conteudo-locacao {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .banner-locacao {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-locacao img {
+        width: 100%;
+        height: auto;
+    }
+
+    .conteudo-banner {
+        padding: 3rem 2rem;
+    }
+
+    .conteudo-banner p {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-locacao {
+        padding: 2rem 1rem;
+    }
+
+    .carrosel-locacao {
+        padding-bottom: 150%; /* Proporção mais alta para mobile */
+    }
+
+    .conteudo-locacao h1 {
+        font-size: 2rem;
+    }
+
+    .conteudo-locacao p {
+        font-size: 1.2rem;
+    }
+
+    .navegacao-carrosel {
+        width: calc(100% + 20px);
+        left: -10px;
+    }
+
+    .slide-locacao.anterior {
+        transform: scale(0.95) translateX(-5%);
+    }
+
+    .slide-locacao.proximo {
+        transform: scale(0.95) translateX(5%);
+    }
+
+    .conteudo-banner {
+        padding: 2rem 1rem;
+    }
+
+    .conteudo-banner h2 {
+        font-size: 2rem;
+    }
+
+    .conteudo-banner p {
+        font-size: 1.2rem;
+    }
+
+    .precos {
+        padding: 2rem 1rem;
+    }
+
+    .tabela-desktop {
+        display: none;
+    }
+
+    .tabelas-mobile {
+        display: flex;
+    }
+
+    .tabelas-mobile picture {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tabelas-mobile img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .localizacao {
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+    .container-localizacao {
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-localizacao h1 {
+        font-size: 2rem;
+    }
+
+    .container-localizacao p {
+        font-size: 1rem;
+    }
+
+    .container-mapa {
+        width: 100%;
+        height: 300px;
+    }
+
+    .banner-locacao {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-locacao img {
+        width: 100%;
+        height: auto;
+    }
+
+    .formulario-locacao {
+        padding: 2rem 1rem;
+    }
+
+    #form-location {
+        padding: 2rem;
+    }
+
+    #form-location h2 {
+        font-size: 2rem;
+    }
+
+    #form-location label {
+        font-size: 1rem;
+    }
+
+    #form-location input {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-btn-carrosel {
+        width: 35px;
+        height: 35px;
+    }
+
+    .conteudo-locacao h1 {
+        font-size: 1.8rem;
+    }
+
+    .localizacao {
+        padding: 1.5rem;
+    }
+
+    .container-localizacao h1 {
+        font-size: 1.8rem;
+    }
+
+    .container-localizacao p {
+        font-size: 0.9rem;
+    }
+
+    .container-mapa {
+        height: 250px;
+    }
+
+    .conteudo-locacao h1 {
+        font-size: 1.8rem;
+    }
+
+    .conteudo-locacao p {
+        font-size: 0.9rem;
+    }
+
+    .conteudo-banner h2 {
+        font-size: 1.8rem;
+    }
+
+    .conteudo-banner p {
+        font-size: 1rem;
+    }
+
+    #form-location {
+        padding: 1.5rem;
+    }
+
+    #form-location h2 {
+        font-size: 1.8rem;
+    }
+}
+
+.formulario-locacao {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #15201d;
+}
+
+#form-location {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: #1E2D32;
+    border-radius: 20px;
+}
+
+#form-location h2 {
+    color: #6EAE9C;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#form-location label {
+    display: block;
+    color: #fff;
+    font-family: 'Baloo 2';
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#form-location input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #15201d;
+    border: 2px solid #6EAE9C;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#form-location input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+}
+
+#form-location input:focus {
+    outline: none;
+    border-color: #fffd83;
+    box-shadow: 0 0 0 2px rgba(110, 174, 156, 0.2);
+}
+
+#button-form {
+    width: 100%;
+}

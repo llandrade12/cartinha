@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Barra de Navegação */
+header {
+    background-color: #6EAE9C;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+nav img {
+    height: 50px;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.links a:hover {
+    color: #f0f0f0;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.icons a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.icons a:hover {
+    color: #f0f0f0;
+}
+
+/* Botão de Acessibilidade */
+.botao-acessibilidade {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: #4a8b7a;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.botao-acessibilidade:hover {
+    background-color: #3a7a6a;
+    transform: scale(1.1);
+}
+
+.botao-acessibilidade i {
+    font-size: 2.5rem;
+}
