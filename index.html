@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Ano de Amor - [Seu Nome] & [Nome Dela]</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="acess.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="confetti"></div>
+    <button id="btn-acessibilidade">
+        <i class="fas fa-universal-access"></i>
+      </button>
+      
+    <nav class="love-nav">
+        <a href="index.html">Home</a>
+        <a href="album.html">Nosso Álbum</a>
+        <a href="poems.html">Meus Poemas</a>
+        <a href="music.html">Nossa Música</a>
+    </nav>
+
+    <main class="container">
+        <h1 class="title">Feliz 1 Ano, Meu Amor!</h1>
+        
+        <div class="heart-beat">
+            <img src="1p.jpg" alt="Nós dois">
+        </div>
+        
+        <p class="message">Hoje a gente completa 1 ano juntos. 1 ano de músicas que viraram nossas, das risadas que escapam até nos momentos mais bobos, dos carinhos trocado nos dias bons e dias ruins. Um ano de tentativas de dormir agarradinhos, lutando pela coberta e roncos. Um ano de doces que viram desculpa pra mimar um ao outro, de séries e filmes que nos prenderam no sofá, de saídas simples que viram momentos inesquecíveis. De ir ao atakadao só pra comprar besteira e ir pra casa rindo, como se fosse um the office.
+
+            O tempo passou rápido, mas cada segundo foi importante. Obrigado por ser meu lugar seguro, minha companhia favorita. Que venham muitos outros anos, mais músicas, mais gargalhadas, mais nós. Te amo mozão <3</p>
+        
+        <div class="counter">
+            <div>
+                <span id="days">365</span>
+                <small>dias</small>
+            </div>
+            <div>
+                <span id="hours">00</span>
+                <small>horas</small>
+            </div>
+            <div>
+                <span id="minutes">00</span>
+                <small>minutos</small>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.getElementById('btn-acessibilidade').addEventListener('click', function() {
+          document.body.classList.toggle('alto-contraste');
+        });
+      </script>
+      
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Música Especial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="acess.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+   <button id="btn-acessibilidade">
+  <i class="fas fa-universal-access"></i> 
+</button>
+
+    
+    
+    <!-- Navbar -->
+    <nav class="love-nav">
+        <a href="index.html">Home</a>
+        <a href="album.html">Nosso Álbum</a>
+        <a href="poems.html">Meus Poemas</a>
+        <a href="music.html" class="active">Nossa Música</a>
+    </nav>
+
+   <!-- Substitua a seção do album-cover e custom-player por este código -->
+<div class="music-card">
+    <!-- Foto/Capa do Álbum -->
+    <div class="music-cover">
+        <img src="santdepara.png" alt="Capa da nossa música">
+    </div>
+
+    
+    <!-- Player de Áudio -->
+    <div class="music-player">
+        <div class="player-info">
+            <h3 id="song-title">Nome da Música</h3>
+            <p id="song-artist">Artista</p>
+        </div>
+        
+        <audio id="audio-player" src="assets/audio/our-song.mp3"></audio>
+        
+        <div class="player-controls">
+            <button id="prev-btn"><i class="fas fa-backward"></i></button>
+            <button id="play-btn"><i class="fas fa-play"></i></button>
+            <button id="next-btn"><i class="fas fa-forward"></i></button>
+        </div>
+        
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input type="range" id="progress-bar" value="0">
+            <span id="duration">0:00</span>
+        </div>
+    </div>
+</div>
+        <!-- Letra e Significado -->
+        <div class="lyrics-box">
+            <h3>"SEU"</h3>
+            <p class="lyrics-text">
+                Foi ouvindo essa música que percebi que você não era só alguém especial e que eu nao precisava ter medo de amar. Você era a pessoa. Aquela que eu quero nas pequenas coisas do dia, seja no café preguiçoso de domingo, no abraço depois de um dia difícil, nas conversas que fazem o tempo voar. E naquele instante, com a música e teu nome martelando no meu pensamento, tudo fez sentido: eu queria ser teu.
+
+                Queria te chamar de amor não só no pensamento, mas na vida. Queria fazer planos de mãos dadas, rir de coisas bobas e criar lembranças que dariam música também.
+                
+                Porque depois de Seu, não tinha mais dúvida: o meu coração já era seu há tempos. 
+                <br>
+                eu só precisei de uma melodia bonitinha pra perceber.
+                <br><br>
+                OBS: Coloquei amante amado pq eu lembro ate hoje quando você falou no tiktok que escutava pensando em mim. Não saiu da minha cabeça aquilo ate hoje.
+
+                
+            </p>
+        </div>
+    </main>
+    <script>
+        document.getElementById('btn-acessibilidade').addEventListener('click', function() {
+          document.body.classList.toggle('alto-contraste');
+        });
+      </script>
+      <script>
+        const songs = [
+          {
+            title: "Seu",
+            artist: "Sant",
+            src: "SEU.mp3",
+            cover: "santdepara.png"
+          },
+          {
+            title: "Amante Amado",
+            artist: "Jorge ben jor",
+            src: "Jorge Ben - Amante Amado.mp3",
+            cover: "amante2.png"
+          },
+          {
+            title: "Estresse",
+            artist: "Alee",
+            src: "ALEE - ESTRESSE.mp3",
+            cover: "estresse.png"
+          }
+        ];
+      
+        let currentSongIndex = 0;
+      
+        const audio = document.getElementById("audio-player");
+        const songTitle = document.getElementById("song-title");
+        const songArtist = document.getElementById("song-artist");
+        const coverImage = document.querySelector(".music-cover img");
+        const playBtn = document.getElementById("play-btn");
+        const playIcon = playBtn.querySelector("i");
+        const nextBtn = document.getElementById("next-btn");
+        const prevBtn = document.getElementById("prev-btn");
+        const progressBar = document.getElementById("progress-bar");
+        const currentTimeEl = document.getElementById("current-time");
+        const durationEl = document.getElementById("duration");
+      
+        function loadSong(index) {
+          const song = songs[index];
+          songTitle.textContent = song.title;
+          songArtist.textContent = song.artist;
+          audio.src = song.src;
+          coverImage.src = song.cover;
+          audio.play();
+          playIcon.classList.replace("fa-play", "fa-pause");
+        }
+      
+        playBtn.addEventListener("click", () => {
+          if (audio.paused) {
+            audio.play();
+            playIcon.classList.replace("fa-play", "fa-pause");
+          } else {
+            audio.pause();
+            playIcon.classList.replace("fa-pause", "fa-play");
+          }
+        });
+      
+        nextBtn.addEventListener("click", () => {
+          currentSongIndex = (currentSongIndex + 1) % songs.length;
+          loadSong(currentSongIndex);
+        });
+      
+        prevBtn.addEventListener("click", () => {
+          currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+          loadSong(currentSongIndex);
+        });
+      
+        // Barra de progresso
+        audio.addEventListener("timeupdate", () => {
+          const progressPercent = (audio.currentTime / audio.duration) * 100;
+          progressBar.value = progressPercent || 0;
+          updateTimeDisplay();
+        });
+      
+        progressBar.addEventListener("input", () => {
+          const seekTime = (progressBar.value / 100) * audio.duration;
+          audio.currentTime = seekTime;
+        });
+      
+        function updateTimeDisplay() {
+          currentTimeEl.textContent = formatTime(audio.currentTime);
+          durationEl.textContent = formatTime(audio.duration);
+        }
+      
+        function formatTime(time) {
+          if (isNaN(time)) return '0:00';
+          const minutes = Math.floor(time / 60);
+          const seconds = Math.floor(time % 60).toString().padStart(2, '0');
+          return `${minutes}:${seconds}`;
+        }
+      
+        audio.addEventListener("loadedmetadata", updateTimeDisplay);
+      
+        // Iniciar com a primeira música
+        loadSong(currentSongIndex);
+      </script>
+      
+      
+      
+
+    <script src="script.js"></script>
+</body>
+</html>
